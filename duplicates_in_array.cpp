@@ -34,7 +34,7 @@ public:
 int main() {
     Solution sol;
 
-    int arr[] = {4, 3, 2, 7, 8, 2, 1, 4};
+    int arr[] = {4, 3, 2, 7, 8, 2, 1, 4, 5, 5, 7};
     int n = sizeof(arr) / sizeof(arr[0]);
 
     vector<int> result = sol.duplicates(arr, n);
