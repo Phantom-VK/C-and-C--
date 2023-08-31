@@ -6,6 +6,8 @@ using namespace std;
 class Solution
 {
 public:
+
+    vector<int>commonElements(int A[], int B[], int C[], int n1, int n2,int n3){
     vector<int> cmn_elements;
     
     int i = 0, j = 0, k = 0;
@@ -36,6 +38,7 @@ public:
     }
 
     return cmn_elements;
+    }
 };
 
 int main()
@@ -52,6 +55,8 @@ int main()
 
     vector<int> output = sol1.commonElements(A, B, C, n1, n2, n3);
     int size = output.size();
+
+    cout<<"Common elements are: "<<endl;
 
     for (int i = 0; i < size; i++)
     {
