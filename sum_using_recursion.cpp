@@ -12,7 +12,7 @@ int sum(int arr[], int size, int i = 0) {
 }
 
 int main() {
-    int arr[100] = {1, 2, 3, 4, 5};
+    int arr[100] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int size = sizeof(arr) / sizeof(arr[0]);
     int output = sum(arr, size);
     cout << "Sum of array elements is: " << output << endl;
