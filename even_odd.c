@@ -5,7 +5,6 @@ int getOdd(int arr[], int n);
 int checkNum(int num);
 int takeInput();
 
-
 int checkNum(int num){
 
     if(num % 2 == 0){
