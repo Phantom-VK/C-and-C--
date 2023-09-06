@@ -2,7 +2,7 @@
 
 struct Employee {
     char name[40], address[40], designation[40];
-    long int number, salary;
+    long long int number, salary;
     int age;
 };
 
@@ -11,77 +11,49 @@ void take_employee_details(int n);
 
 int take_employee_num() {
     int n;
-    printf("Enter number of employee: ");
+    printf("Enter number of employees: ");
     scanf("%d", &n);
     return n;
 }
 
 void take_employee_details(int n) {
-    
     struct Employee employee[n];
-    
 
     for (int i = 0; i < n; i++) {
         printf("\nEnter name of employee %d: ", i + 1);
-        scanf("%[^\n]", employee[i].name);
-        printf("\n");
-
-        printf("Enter age of employee %s: ", employee[i].name);
+        scanf(" %[^\n]", employee[i].name);
+        
+        printf("Enter age: ");
         scanf("%d", &employee[i].age);
-        printf("\n");
 
-        printf("Enter address of employee %s: ", employee[i].name);
-        scanf("%s",employee[i].address);
-        printf("\n");
+        printf("Enter address: ");
+        scanf(" %[^\n]", employee[i].address);
 
-        printf("Enter mobile number of employee %s: ", employee[i].name);
-        scanf("%ld", &employee[i].number);
-        printf("\n");
+        printf("Enter mobile number: ");
+        scanf("%lld", &employee[i].number);
 
-        printf("Enter designation of employee %s: ", employee[i].name);
-        scanf("%s", employee[i].designation);
-        printf("\n");
+        printf("Enter designation: ");
+        scanf(" %[^\n]", employee[i].designation);
 
-        printf("Enter salary of employee %s: ", employee[i].name);
-        scanf("%ld", &employee[i].salary);
-        printf("\n");
+        printf("Enter salary: ");
+        scanf("%lld", &employee[i].salary);
 
-        printf("Details of employee %s are saved", employee[i].name);
-        printf("\n");
-        
+        printf("Details of employee %s are saved\n", employee[i].name);
     }
 
+    printf("\n_________________________________________________________________________\n");
+    printf("Details of employees are as follows:\n");
 
-     for (int i = 0; i < n; i++) {
-        printf("\n_________________________________________________________________________");
-        printf("\nDetails of employee is as follows:");
-        printf("\n");
-
+    for (int i = 0; i < n; i++) {
         printf("\nName of employee: %s", employee[i].name);
-        printf("\n");
-
         printf("\nAge of employee: %d", employee[i].age);
-        printf("\n");
-
         printf("\nDesignation of employee: %s", employee[i].designation);
-        printf("\n");
-
-        printf("\nSalary of employee: %ld", employee[i].salary);
-        printf("\n");
-
-        printf("\nMobile number of employee: %ld", employee[i].number);
-        
+        printf("\nSalary of employee: %lld", employee[i].salary);
+        printf("\nMobile number of employee: %lld\n", employee[i].number);
     }
-
-
 }
 
-int main(){
-    
+int main() {
     take_employee_details(take_employee_num());
-    
-
-    
-
     return 0;
 }
