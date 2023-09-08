@@ -36,6 +36,31 @@ void Student::take_details()
     }
 }
 
+inline char Student::check_grades(int mark)
+{
+    if (mark < 40)
+    {
+        return 'F';
+    }
+    else if (mark >= 40 && mark < 60)
+    {
+        return 'D';
+    }
+    else if (mark >= 60 && mark < 70)
+    {
+        return 'C';
+    }
+    else if (mark >= 80 && mark < 90)
+    {
+        return 'B';
+    }
+    else if (mark >= 90 && mark < 100)
+    {
+        return 'A';
+    }
+}
+
+
 void Student::show_details()
 {
 
@@ -50,38 +75,10 @@ void Student::show_details()
         total_marks = total_marks + marks_array[i];
     }
 
-    cout << "\nTotal marks: " << total_marks;
+    cout << "\nTotal marks: " << total_marks<<endl;
 }
 
-inline char Student::check_grades(int mark)
-{
 
-    if (mark < 40)
-    {
-
-        return 'F';
-    }
-    else if (mark >= 40 && mark < 60)
-    {
-
-        return 'D';
-    }
-    else if (mark >= 60 && mark < 70)
-    {
-
-        return 'C';
-    }
-    else if (mark >= 80 && mark < 90)
-    {
-
-        return 'B';
-    }
-    else if (mark >= 90 && mark < 100)
-    {
-
-        return 'A';
-    }
-}
 
 int main()
 {

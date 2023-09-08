@@ -1,37 +1,38 @@
 #include <stdio.h>
 
 int main() {
-    char name[] = "23+";
-    int size = sizeof(name) / sizeof(name[0]);
+    char input[] = "23+";
+    int size = sizeof(input) / sizeof(input[0]);
     printf("%d", size);
-    char array[size];
+    char stack[size];
+    int top = -1;
 
     for (int i = 0; i < size; i++) {
-        array[i] = name[i];
+        stack[i] = input[i];
     }
     for (int i = 0; i < size; i++) {
-        printf("\n%c", array[i]);
+        printf("\n%c", stack[i]);
     }
 
-    const char op = array[2];
+    const char op = stack[2];
     if (op == '*') {
-        int operand1 = array[0] - '0'; 
-        int operand2 = array[1] - '0'; 
+        int operand1 = stack[0] - '0'; 
+        int operand2 = stack[1] - '0'; 
         int operation = operand1 * operand2;
         printf("%d", operation);
     } else if (op == '+') {
-        int operand1 = array[0] - '0'; 
-        int operand2 = array[1] - '0'; 
+        int operand1 = stack[0] - '0'; 
+        int operand2 = stack[1] - '0'; 
         int operation = operand1 + operand2;
         printf("%d", operation);
     }else if (op == '-') {
-        int operand1 = array[0] - '0'; 
-        int operand2 = array[1] - '0'; 
+        int operand1 = stack[0] - '0'; 
+        int operand2 = stack[1] - '0'; 
         int operation = operand1 - operand2;
         printf("%d", operation);
     }else if (op == '/') {
-        int operand1 = array[0] - '0'; 
-        int operand2 = array[1] - '0'; 
+        int operand1 = stack[0] - '0'; 
+        int operand2 = stack[1] - '0'; 
         int operation = operand1 / operand2;
         printf("%d", operation);
     }
