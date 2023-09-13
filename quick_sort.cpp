@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-//Har Har Mahadev!!!
+
 
 void swap(int arr[], int i, int j){
 
