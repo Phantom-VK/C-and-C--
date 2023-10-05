@@ -37,7 +37,7 @@ void xor () {
     }
 }
 
-    void xnor()
+void xnor()
 {
 
     printf("\nAfter XNOR operation:");
