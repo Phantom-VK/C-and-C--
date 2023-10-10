@@ -82,21 +82,7 @@ void squrt()
     }
     
 }
-void cubrt()
-{
-    printf("\nEnter number: ");
-    scanf("%d", &num1);
-    for (int i = 1; i * i * i <= num1; i++)
-    {
 
-        if ((num1 % i == 0) && (num1 / i == i))
-        {
-            printf("Cube root of given number is: %d", i);
-            break;
-        }
-    }
-    
-}
 void power()
 {
     long double pow = 1.0;
@@ -114,6 +100,22 @@ void power()
 
     printf("Answer is: %.0Lf", pow);
 }
+void logarithm()
+{
+    printf("\nEnter number: ");
+    scanf("%lf", &num1);
+    double result = log(num1);
+    printf("Natural logarithm of the given number is: %lf", result);
+}
+
+void cubrt()
+{
+    printf("\nEnter number: ");
+    scanf("%d", &num1);
+    double result = cbrt(num1);
+    printf("Cube root of the given number is: %lf", result);
+}
+
 void cases(int choice)
 {
     switch (choice)
@@ -144,6 +146,9 @@ void cases(int choice)
         break;
     case 9:
         squrt();
+        break;
+    case 10:
+        logarithm();
         break;
     case 11:
         printf("Program Ended!!");
