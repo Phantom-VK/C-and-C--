@@ -6,14 +6,15 @@ int main(){
     char string1[100];
     char string2[100];
     
-    int *ptr, *ptr2;//initializing a pointers
+    char *ptr, *ptr2;//initializing a pointers
 
-    ptr = string1;//assigning address of string1 variable in pointer
-    ptr2 = string2;//assigning address of string2 variable in pointer
-    printf("Enter srting 1: ");
-    gets(ptr);//Taking input in string 1 using gets funtion
+    ptr = &string1;//assigning address of string1 variable in pointer
+    ptr2 = &string2;//assigning address of string2 variable in pointer
+    printf("Enter string 1: ");
+    fgets(ptr, sizeof(string1), stdin); // Using fgets to input string1
+
     printf("Enter string 2: ");
-    gets(ptr2);//Taking input in string 2 using gets funtion
+    fgets(ptr2, sizeof(string2), stdin); // Using fgets to input string2
 
     
     strcat(ptr, ptr2); //adding data of string 2 in result
