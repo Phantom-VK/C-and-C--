@@ -1,3 +1,4 @@
+//Adding two arrays using pointers
 #include<stdio.h>
 
 int addArray(int array[], int array2[], int n){

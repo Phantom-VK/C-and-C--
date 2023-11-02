@@ -1,3 +1,4 @@
+//Code to add an element in array at given index
 #include<stdio.h>
 
 void addElement(int arr[], int size,int index, int num);
@@ -6,9 +7,9 @@ void addElement(int arr[], int size,int index, int num){
 
     for (int i = 0; i < size-index-1; i++)
     {
-        arr[size-i-1] = arr[size-i-2];
+        arr[size-i-1] = arr[size-i-2];//shifting one element right to make an empty space at given index
     }
-        arr[index] = num;
+        arr[index] = num; //inserting an element at that indexs
 
     for (int i = 0; i < size; i++)
     {
