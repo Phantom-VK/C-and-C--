@@ -12,11 +12,11 @@ void show();
 int main()
 {
     int choice;
-
+    printf("\nPerform operations on the stack:");
+    printf("\n1.Push the element\n2.Pop the element\n3.Show\n4.End");
     while (1)
     {
-        printf("\nPerform operations on the stack:");
-        printf("\n1.Push the element\n2.Pop the element\n3.Show\n4.End");
+        
         printf("\n\nEnter the choice: ");
         scanf("%d", &choice);
 
