@@ -1,3 +1,4 @@
+//Code to calculate area of different 2D shapes
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
