@@ -1,4 +1,16 @@
 #include <stdio.h>
+
+//using recursion
+// int facto(int num){
+    
+//     if(num <= 1){
+//         return num;
+//     }else{
+//         return num*facto(num-1);
+//     }
+// }
+
+
 int main() {
     int n, i;
     unsigned long long fact = 1;
