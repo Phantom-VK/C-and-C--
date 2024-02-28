@@ -20,7 +20,7 @@ int main(){
 
     head = a;
 
-    a ->data = 5;
+    a -> data = 5;
     b ->data = 10;
     c ->data = 15;
     d ->data = 20;
